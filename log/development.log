@@ -824,3 +824,89 @@ Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1084)
 ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=edit):
   
 app/controllers/articles_controller.rb:7:in `show'
+Started GET "/articles/edit" for ::1 at 2021-06-23 22:16:23 +0100
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 25ms (ActiveRecord: 1.5ms | Allocations: 4377)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=edit):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/" for ::1 at 2021-06-23 22:16:35 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (27.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 69.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 344.9ms | Allocations: 6298)
+Completed 200 OK in 372ms (Views: 340.8ms | ActiveRecord: 27.9ms | Allocations: 7525)
+
+
+Started GET "/" for ::1 at 2021-06-23 22:16:38 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 671)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3700)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 4099)
+
+
+Started GET "/articles" for ::1 at 2021-06-23 22:16:51 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3690)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4078)
+
+
+Started GET "/articles/1/edit" for ::1 at 2021-06-23 22:16:59 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25:in `edit'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1106)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=1):
+  
+app/controllers/articles_controller.rb:25:in `edit'
+Started GET "/articles/edit" for ::1 at 2021-06-23 22:17:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1069)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=edit):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/articles/comments" for ::1 at 2021-06-23 22:17:22 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"comments"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1069)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=comments):
+  
+app/controllers/articles_controller.rb:7:in `show'
